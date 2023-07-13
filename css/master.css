@@ -1,0 +1,75 @@
+/*=== Aplicando CSS Global===*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+}
+
+/*=== Aplicando CSS al encabezado===*/
+#logo{
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+}
+#menu{
+    text-align: center;
+}
+
+
+
+
+
+/*=== Aplicando comportamiento resposive o adaptativo===*/
+/* Medium devices (tablets, 768px and up)*/
+/*=== Trabajando con CSS-GRID===*/
+@media (min-width: 768px) { 
+    /*=== Aplicando CSS al encabezado===*/
+    #encabezado{
+        display: grid;
+        grid-template-columns: 1fr 2fr; /*Medidas: px em rem % fr*/
+        align-items: center;
+    }
+    #menu{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    #opcionesIzquierdo{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    #opcionesDerecho{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    /*=== Aplikcando CSS a la seccioin productos===*/
+    #productos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    /*=== Aplicando CSS a la Galería===*/
+    section#galeria{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+
+}
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    section#galeria{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+    }
+}
+
+
+
+
